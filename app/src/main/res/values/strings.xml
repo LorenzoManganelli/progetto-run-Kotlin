@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LorenzoManganelliRun++</string>
+    <string-array name="tipi_allenamento">
+        <item>Corsa</item>
+        <item>Pesi</item>
+        <item>Ginnastica</item>
+    </string-array>
+</resources>
