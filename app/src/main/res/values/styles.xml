@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomTimePickerDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <!-- Sfondo principale del dialog -->
+        <item name="android:background">#888</item>
+
+        <!-- Colore dei testi -->
+        <item name="android:textColorPrimary">#000000</item>
+
+        <!-- Colore bottoni (OK/Annulla) -->
+        <item name="colorAccent">#6200EE</item>
+
+        <!-- Titolo orologio -->
+        <item name="android:headerBackground">#EEEEEE</item>
+    </style>
+</resources>

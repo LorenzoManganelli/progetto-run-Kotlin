@@ -4,6 +4,7 @@ import androidx.room.*
 import com.example.runplusplus.model.Allenamento
 import kotlinx.coroutines.flow.Flow
 
+//le varie operazioi del sistema
 @Dao
 interface AllenamentoDao {
     @Query("SELECT * FROM allenamenti_table ORDER BY data ASC") //ordina per data extra, serve se la persona clicca di nuovo (?)
@@ -28,16 +29,13 @@ interface AllenamentoDao {
     @Query("SELECT * FROM allenamenti_table ORDER BY tipo ASC")
     fun getAllAllenamentiOrderByTipo(): Flow<List<Allenamento>>
 
-    //@Query("SELECT * FROM allenamenti WHERE tipo LIKE :tipo")
-    //fun getAllenamentiByTipo(tipo: String): Flow<List<Allenamento>>
-
     @Query("SELECT * FROM allenamenti_table WHERE id = :id")
     fun getAllenamentoById(id: Int): Flow<Allenamento>
 
     @Query("SELECT * FROM allenamenti_table WHERE tipo = :tipo") //prende in base al tipo
     fun getAllenamentiByTipo(tipo: String): Flow<List<Allenamento>>
 
-    // Funzione sincrona per il log
+    //funzione sincrona per il log, messa per sicurezza
     @Query("SELECT * FROM allenamenti_table")
     suspend fun getAllAllenamentiSync(): List<Allenamento>
 }

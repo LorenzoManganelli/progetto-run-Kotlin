@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/allenamenti"
+        android:icon="@drawable/ic_allenamenti"
+        android:title="Allenamenti"/>
+    <item
+        android:id="@+id/calendario"
+        android:icon="@drawable/ic_calendario"
+        android:title="Calendario"/>
+    <item
+        android:id="@+id/allenamenti_precaricati"
+        android:icon="@drawable/ic_precaricati"
+        android:title="Precaricati"/>
+    <item
+        android:id="@+id/remind_to_train"
+        android:icon="@drawable/ic_rtt"
+        android:title="RTT"/>
+    <item
+        android:id="@+id/test"
+        android:icon="@drawable/ic_testing"
+        android:title="Test"/>
+</menu>

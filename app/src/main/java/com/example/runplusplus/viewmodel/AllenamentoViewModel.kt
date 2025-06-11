@@ -5,9 +5,7 @@ import androidx.lifecycle.*
 import com.example.runplusplus.model.Allenamento
 import com.example.runplusplus.repository.AllenamentoRepository
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class AllenamentoViewModel(private val repository: AllenamentoRepository) : ViewModel() {
 

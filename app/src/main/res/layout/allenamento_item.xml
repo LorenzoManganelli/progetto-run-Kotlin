@@ -1,12 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="4dp">
+    android:layout_margin="12dp"
+    android:background="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/item_background_gray">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,36 +22,75 @@
             android:id="@+id/dataTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceHeadline6"
-            android:text="Data" />
+            android:text="Data"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tipoTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceBody2"
-            android:text="Tipo" />
+            android:text="Tipo"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
 
-        <TextView
-            android:id="@+id/durataTextView"
+        <!-- Durata + minuti -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceBody2"
-            android:text="Durata" />
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
 
-        <TextView
-            android:id="@+id/calorieTextView"
+            <TextView
+                android:id="@+id/durataTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Durata"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" minuti"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <!-- Calorie + calorie -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceBody2"
-            android:text="Calorie" />
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/calorieTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calorie"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" calorie"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/noteTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceBody2"
-            android:text="Note" />
+            android:text="Note"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="4dp"/>
 
     </LinearLayout>
 

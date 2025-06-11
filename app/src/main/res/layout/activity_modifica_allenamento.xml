@@ -1,54 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/cardview_dark_background">
 
-    <EditText
-        android:id="@+id/editTextData"
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Data (YYYY-MM-DD)"
-        android:inputType="date" />
+        android:layout_height="wrap_content">
 
-    <Spinner
-        android:id="@+id/spinnerTipo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/tipi_allenamento" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="@android:color/white"
+            app:subtitleTextColor="@android:color/white" />
 
-    <EditText
-        android:id="@+id/editTextDurata"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Durata (minuti)"
-        android:inputType="number" />
+        <EditText
+            android:id="@+id/editTextData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data (DD-MM-YYYY)"
+            android:inputType="date"
+            android:background="@drawable/edittext_background"/>
 
-    <EditText
-        android:id="@+id/editTextCalorie"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Calorie bruciate"
-        android:inputType="number" />
+        <Spinner
+            android:id="@+id/spinnerTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/tipi_allenamento"
+            android:background="@drawable/edittext_background"/>
 
-    <EditText
-        android:id="@+id/editTextNote"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Note"
-        android:inputType="textMultiLine" />
+        <EditText
+            android:id="@+id/editTextDurata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Durata (minuti)"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"/>
 
-    <Button
-        android:id="@+id/buttonSalva"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Salva Modifiche" />
+        <EditText
+            android:id="@+id/editTextCalorie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calorie bruciate"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"/>
 
-    <Button
-        android:id="@+id/buttonElimina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Elimina Allenamento" />
+        <EditText
+            android:id="@+id/editTextNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Note"
+            android:inputType="textMultiLine"
+            android:background="@drawable/edittext_background"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/buttonSalva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salva Modifiche"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/buttonElimina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Elimina Allenamento"
+            android:backgroundTint="@color/red"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

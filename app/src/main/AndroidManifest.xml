@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <!--cambiato stile per far funzionare le toolbar-->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,24 +13,77 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RunPlusPlus"
-        tools:targetApi="31">
+        android:theme="@style/Theme.LorenzoManganelliRun"
+        tools:targetApi="31"
+        android:screenOrientation="fullUser"
+        tools:ignore="DiscouragedApi">
+
         <activity
             android:name=".view.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.RunPlusPlus">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LorenzoManganelliRun">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".view.AllenamentiActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
         <activity android:name=".view.NuovoAllenamentoActivity"
-            android:exported="false"/>
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
         <activity android:name=".view.ModificaAllenamentoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".view.CalendarioActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".view.AggiungiAllenamentoCalendarioActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".view.DettagliAllenamentiCalendarioActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".view.AllenamentiPrecaricatiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        
+        <activity android:name=".view.RemindToTrainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".view.RTTDettagliActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".view.RTTGiornoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".view.ValutazioneFinaleRTTActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".view.TestingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
+        <receiver android:name=".receiver.NotificaAllenamentoReceiver"
             android:exported="false"/>
+
+        <receiver android:name=".receiver.RTTNotificationReceiver"
+            android:exported="false"/>
+
     </application>
 
 </manifest>

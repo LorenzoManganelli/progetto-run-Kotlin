@@ -4,7 +4,7 @@ import com.example.runplusplus.dao.AllenamentoDao
 import com.example.runplusplus.model.Allenamento
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.firstOrNull
-
+//tutte le operazioni degli allenamenti
 class AllenamentoRepository(private val allenamentoDao: AllenamentoDao) {
 
     val allAllenamenti: Flow<List<Allenamento>> = allenamentoDao.getAllAllenamenti()

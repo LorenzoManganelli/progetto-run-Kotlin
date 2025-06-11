@@ -7,8 +7,27 @@
     </style>
 
     <!-- Base application theme. -->
-    <style name="Theme.RunPlusPlus" parent="Base.Theme.RunPlusPlus">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Theme.RunPlusPlus" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Override globale per tutti gli Spinner -->
+        <item name="android:spinnerItemStyle">@style/CustomSpinnerItem</item>
     </style>
+
+    <style name="CustomSpinnerItem" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Theme.LorenzoManganelliRun" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorSecondary">@android:color/black</item>
+        <item name="android:textColorHint">@android:color/black</item>
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+    </style>
+
 </resources>

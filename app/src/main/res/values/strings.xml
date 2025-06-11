@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">LorenzoManganelliRun++</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
+    <string name="immagine_da_aggiungere">IMMAGINE DA AGGIUNGERE</string>
     <string-array name="tipi_allenamento">
         <item>Corsa</item>
         <item>Pesi</item>

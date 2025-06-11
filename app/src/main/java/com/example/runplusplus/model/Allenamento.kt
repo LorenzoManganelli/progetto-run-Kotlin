@@ -8,7 +8,7 @@ data class Allenamento(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val data: String,
     val tipo: String, // RICORDA: sono 3 Corsa, Pesi e Ginnastica
-    val durata: Int, // In minuti, non è elegante ma funziona
-    val calorieBruciate: Int, // Questo sarà un semplice valore numerico (forse penserò a qualcosa di meglio in futuro)
+    val durata: Int, //in minuti, non è elegante ma funziona
+    val calorieBruciate: Int, //questo sarà un semplice valore numerico
     val note: String? = null
 )
